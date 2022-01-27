@@ -43,10 +43,15 @@ public class MMRExercicio5 extends HttpServlet {
 		ladoB = Integer.parseInt(request.getParameter("ladoB"));
 		ladoC = Integer.parseInt(request.getParameter("ladoC"));
 		
-		if(ladoA == ladoB && ladoA == ladoC && ladoB == ladoC ) {
+		if (ladoA == 0 && ladoA == 0 && ladoB == 0) {
+			response.getWriter().println("Valor invalido, digite um valor maior que 0!");
+		}
+		else if (ladoA == ladoB && ladoA == ladoC && ladoB == ladoC) {
 			response.getWriter().println("Isso é um triângulo equilátero.");
+		
 		} else if (ladoA != ladoB && ladoA != ladoC && ladoB != ladoC) {
 			response.getWriter().println("Isso é um triângulo escaleno.");
+		
 		} else {
 			response.getWriter().println("Isso é um triângulo isóscele");
 		}
