@@ -27,7 +27,7 @@ public class MMRExercicio5 extends HttpServlet {
 	 */
 	protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
 		// TODO Auto-generated method stub
-		response.getWriter().append("Served at: ").append(request.getContextPath());
+//		response.getWriter().append("Served at: ").append(request.getContextPath());
 	}
 
 	/**
@@ -36,6 +36,22 @@ public class MMRExercicio5 extends HttpServlet {
 	protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
 		// TODO Auto-generated method stub
 		doGet(request, response);
+		
+		int ladoA, ladoB, ladoC;
+		
+		ladoA = Integer.parseInt(request.getParameter("ladoA"));
+		ladoB = Integer.parseInt(request.getParameter("ladoB"));
+		ladoC = Integer.parseInt(request.getParameter("ladoC"));
+		
+		if(ladoA == ladoB && ladoA == ladoC && ladoB == ladoC ) {
+			response.getWriter().println("Isso é um triângulo equilátero.");
+		} else if (ladoA != ladoB && ladoA != ladoC && ladoB != ladoC) {
+			response.getWriter().println("Isso é um triângulo escaleno.");
+		} else {
+			response.getWriter().println("Isso é um triângulo isóscele");
+		}
+		
+		
 	}
 
 }

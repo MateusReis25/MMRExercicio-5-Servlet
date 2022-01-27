@@ -17,7 +17,7 @@
                 </div>
             </div>
 
-             <form method="post" action="MMRProjetoCalculadora">
+             <form method="post" action="MMRExercicio5">
                 <div class="row">
                     <div class="calculo col-12">
                         <div class="col-12">Lado A:</div>
@@ -27,7 +27,7 @@
     					<div class="col-12">Lado C:</div>
                         <input type="number" name="ladoC">
                         <div>
-                            <button type="reset"  style="background-color: rgb(110, 120, 255);" >Limpar</button>
+                            <button type="reset"  style="background-color: rgb(110, 120, 255)">Limpar</button>
                             <button type="submit">Enviar</button>
                         </div>
                     </div>
